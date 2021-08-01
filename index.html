@@ -77,6 +77,10 @@
        };
    </script>
    <style>
+   .hard{
+   position: fixed;
+   top:90px;
+ }
        /*jssor slider loading skin spin css*/
        .jssorl-009-spin img {
            animation-name: jssorl-009-spin;
@@ -1309,5 +1313,34 @@ function consoleText(words, id, colors) {
     }
   }, 400)
 }
+over=false
+  function act(obj){
+    var element = document.getElementById("ctrmld");
+/*console.log(window.innerHeight)
+  if(obj==1) element.classList.add("hard");
+  else   element.classList.remove("hard");
+*/
+
+if(!isInViewport(element)){
+if( obj==1){
+  over =!over
+  if(over)
+element.classList.add("hard");
+}
+}
+else   {element.classList.remove("hard");
+over=!over
+}
+  }
+  function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 50 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+
+  }
 </script>
 </html>
