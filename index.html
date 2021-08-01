@@ -72,20 +72,7 @@
          };
       </script>
       <style>
-         section:hover > div > div > div> div.hard{
-         position: fixed;
-         width: 530px;
-         margin-top: 0px;
-         margin-bottom: 0px;
-         top: 100px;
-         }
-         section > div > div > div> div.hard{
-           position: absolute;
-         width: 530px;
-         margin-top: 0px;
-         margin-bottom: 0px;
-         bottom: 0px;
-         }
+
          /*jssor slider loading skin spin css*/
          .jssorl-009-spin img {
          animation-name: jssorl-009-spin;
@@ -1341,9 +1328,9 @@
         function act(obj){
           var element = document.getElementById("divSticky");
 
-        if(obj==1){ if(!isInViewport(element)) element.style.cssText = 'position: fixed; width: 530px; margin-top: 0px; margin-bottom: 0px;top: 100px;';
+        if(obj==1){ if(!isInViewport(element)) element.style.cssText = 'position: fixed;margin-top: 0px; margin-bottom: 0px;top: 100px;';
       }
-        else   element.style.cssText = 'position: absolute; width: 530px; margin-top: 0px; margin-bottom: 0px; bottom: 0px;';
+        else   element.style.cssText = 'position: absolute;margin-top: 0px; margin-bottom: 0px; bottom: 0px;';
 
         }
         function isInViewport(element) {
