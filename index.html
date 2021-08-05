@@ -132,6 +132,15 @@
          top:-0.14em;
          left:10px;
          }
+         div.sticky {
+          position:fixed;
+          top:80%;
+          left:84%;
+          border-style: groove;
+          width:200px;
+          height:100px;
+          z-index:120;
+          }
       </style>
       <!-- Template Main CSS File -->
       <link href="assets/css/style.css" rel="stylesheet">
@@ -160,10 +169,10 @@
                   <li class="dropdown">
                      <a href="#"><span>PORTFOLIO</span> <i class="bi bi-chevron-down"></i></a>
                      <ul>
-                        <li><a class="nav-link scrollto 2-active@"  href="2.html">WEB DESIGN</a></li>
+                        <li><a class="nav-link scrollto 2-active@"  href="2.html">FEATURED PROJECTS</a></li>
                         <li><a class="nav-link scrollto 3-active@"  href="3.html">DIGITAL MARKETING</a></li>
                         <li><a class="nav-link scrollto 4-active@"  href="4.html">GRAPHIC DESIGN</a></li>
-                        <li><a class="nav-link scrollto 5-active@"  href="5.html">FEATURED PROJECTS</a></li>
+                        <li><a class="nav-link scrollto 5-active@"  href="5.html">WEB DESIGN</a></li>
                      </ul>
                   </li>
                   <li class="dropdown">
@@ -301,6 +310,10 @@
          </svg>
       </section>
       <!-- End Hero -->
+            <div class="sticky">
+        <img src="https://cdn.carrot.com/uploads/sites/36702/2019/08/5StarGoogle.png" style="width:100%;
+                      height:100%;">
+      </div>
       <main id="main">
          <!-- ======= About Section ======= -->
          <section onmousewheel="resetSticky()" onmouseover="resetSticky()" id="about" class="about">
@@ -309,7 +322,7 @@
                   <h2>Web Design Sunshine Coast</h2>
                   <p>AWARD-WINNING WEB DESIGN AGENCY BASED ON THE SUNSHINE COAST</p>
                </div>
-               <div class="row content" data-aos="fade-up">
+               <div class="row content" data-aos="fade-up" >
                   <div class="col-lg-12">
                      <p>
                         At OZZYTEK, we have a team of professional website designers who have trained for years in the expertise of building websites. These websites are specifically designed to target your intended audience – our team takes on-board your exact requirements and aligns your goals with the outcome of the web design.
@@ -382,7 +395,8 @@
                <div class="row">
                   <div class="col-md-5">
                     <div id="divSticky1" class="section-title" data-aos="zoom-out">
-                       <h2>CUSTOM WORDPRESS WEBSITES</h2>
+                      <a href="" onMouseOver="alert('Your Message');return true;">CUSTOM WORDPRESS WEBSITES</a>
+                       <!--h2>CUSTOM WORDPRESS WEBSITES</h2-->
                        <p>Website Design Packages</p>
                     </div>
                   </div>
