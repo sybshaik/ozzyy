@@ -141,6 +141,27 @@
           height:100px;
           z-index:120;
           }
+
+          section {
+            padding: 60px 0;
+            overflow: hidden;
+          }
+
+          .section-title {
+            padding-bottom: 50px;
+          }
+
+
+          .sticky2{
+            position: fixed;
+            top: 20%;
+            width: 50%;
+          }
+
+          /* #divSticky1 {
+    position: fixed; width: 530px; margin-top: 0px; margin-bottom: 0px; top: 100px;
+          } */
+
       </style>
       <!-- Template Main CSS File -->
       <link href="assets/css/style.css" rel="stylesheet">
@@ -316,7 +337,7 @@
       </div>
       <main id="main">
          <!-- ======= About Section ======= -->
-         <section onmousewheel="resetSticky()" onmouseover="resetSticky()" id="about" class="about">
+         <section id="about" class="about">
             <div class="container">
                <div class="section-title" data-aos="zoom-out">
                   <h2>Web Design Sunshine Coast</h2>
@@ -330,7 +351,7 @@
                      <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:150px;overflow:hidden;visibility:hidden;">
                         <!-- Loading Screen -->
                         <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                           <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+                           <img style="margin-top:-19px; position:relative; top:50%;width:38px; height:38px;" src="img/spin.svg" />
                         </div>
                         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:150px;overflow:hidden;">
                            <div>
@@ -378,25 +399,25 @@
                         <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
                         <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
                         </ul-->
-                  </div>
-                  <div class="col-lg-12 pt-4 pt-lg-0">
+                  </div >
+                  <div id="prevDiv" class="col-lg-12 pt-4 pt-lg-0">
                      <p>
                         Our website designers have what it takes to ensure your local business succeeds performance-wise for various purposes, including ranking in the search engines, converting visitors to buyers/clients, and creating a seamless user experience on your website.
                      </p>
-                     <a href="#" class="btn-learn-more">View our Works</a>
+                     <a  href="#" class="btn-learn-more">View our Works</a>
                   </div>
                </div>
             </div>
          </section>
          <!-- End About Section -->
          <!-- ======= Features Section ======= -->
-         <section onmouseover="act(1)" onmouseout="act(2)" id="features" class="features">
+         <section  id="features" class= "features">
             <div  class="container rounded">
                <div class="row">
                   <div class="col-md-5">
-                    <div id="divSticky1" class="section-title" data-aos="zoom-out">
-                      <a href="" onMouseOver="alert('Your Message');return true;">CUSTOM WORDPRESS WEBSITES</a>
-                       <!--h2>CUSTOM WORDPRESS WEBSITES</h2-->
+                    <div  class="section-title" id="divSticky1" data-aos="zoom-out">
+                      <!--a href="" onMouseOver="alert('Your Message');return true;">CUSTOM WORDPRESS WEBSITES</a-->
+                       <h2>CUSTOM WORDPRESS WEBSITES</h2>
                        <p>Website Design Packages</p>
                     </div>
                   </div>
@@ -1485,22 +1506,33 @@
         }, 400)
       }
       over=false
-      /*  function act(obj){
-          var element = document.getElementById("divSticky");
+  /*  function act(obj){
+      var element = document.getElementById("divSticky1");
 
-        if(obj==1){ if(!isInViewport(element)) element.style.cssText = 'position: fixed;margin-top: 0px; margin-bottom: 0px;top: 100px;';
+        if(obj==1){ if(isInViewport(element))
+          element.style.cssText = "position: fixed; width: 530px; margin-top: 0px; margin-bottom: 0px; top: 100px;"
       }
-        else   element.style.cssText = 'position: absolute;margin-top: 0px; margin-bottom: 0px; bottom: 0px;';
+        else
+          element.style.cssText = "position: absolute; width: 530px; margin-top: 0px; margin-bottom: 0px; bottom: 0px;"
 
-        }
-        function isInViewport(element) {
+      }
+      /*function dact(){
+
+          var element = document.getElementById("prevDiv");
+          if(!isInViewport(element)){
+             element.style.cssText = '  position: -webkit-sticky; position: sticky; width: 530px; margin-top: 0px; margin-bottom: 0px; top: 100px;'
+          }
+            else element.style.cssText = '';*/
+
+    /*  }
+      function isInViewport(element) {
         const rect = element.getBoundingClientRect();
         return (
-            rect.top >= 60
+            rect.top >=-150
         );
 
         }
-        function resetSticky(){
+    /*  function resetSticky(){
 
           var element = document.getElementById("divSticky");
           element.style.cssText = '';
@@ -1514,5 +1546,17 @@
         }
         function
         doit();*/
+        window.onscroll = function act(obj) {myFunction()};
+
+        var header = document.getElementById("divSticky1");
+        var sticky2 = header.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset > sticky2) {
+            header.classList.add("sticky2");
+          } else {
+            header.classList.remove("sticky2");
+          }
+        }
+
    </script>
-</html>
